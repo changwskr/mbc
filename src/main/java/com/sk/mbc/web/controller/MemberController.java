@@ -1,6 +1,6 @@
-package com.sk.mbc.controller;
+package com.sk.mbc.web.controller;
 
-import com.sk.mbc.service.MemberService;
+import com.sk.mbc.business.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

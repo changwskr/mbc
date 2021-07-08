@@ -1,7 +1,7 @@
-package com.sk.mbc.service;
+package com.sk.mbc.business.service;
 
-import com.sk.mbc.domain.Member;
-import com.sk.mbc.repository.MemoryMemberRepository;
+import com.sk.mbc.business.domain.Member;
+import com.sk.mbc.business.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

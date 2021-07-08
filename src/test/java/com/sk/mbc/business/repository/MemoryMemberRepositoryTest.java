@@ -1,6 +1,6 @@
-package com.sk.mbc.repository;
+package com.sk.mbc.business.repository;
 
-import com.sk.mbc.domain.Member;
+import com.sk.mbc.business.domain.Member;
 //import org.junit.jupiter.api.Assertions;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;

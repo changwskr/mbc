@@ -1,6 +1,6 @@
-package com.sk.mbc.repository;
+package com.sk.mbc.business.repository;
 
-import com.sk.mbc.domain.Member;
+import com.sk.mbc.business.domain.Member;
 
 import java.util.List;
 import java.util.Optional;

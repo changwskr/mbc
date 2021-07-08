@@ -1,8 +1,8 @@
-package com.sk.mbc.service;
+package com.sk.mbc.business.service;
 
-import com.sk.mbc.domain.Member;
-import com.sk.mbc.repository.IMemberRepository;
-import com.sk.mbc.repository.MemoryMemberRepository;
+import com.sk.mbc.business.domain.Member;
+import com.sk.mbc.business.repository.IMemberRepository;
+import com.sk.mbc.business.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
