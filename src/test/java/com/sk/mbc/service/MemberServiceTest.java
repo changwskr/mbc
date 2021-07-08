@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository()
+    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
     MemberService memberService;
 
 
