@@ -1,21 +1,15 @@
-package com.sk.mbc.business.service;
+package com.sk.mba.business.service;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.repository.IMemberRepository;
-import com.sk.mbc.business.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
 
-//@Service --> springconfig 파일로 변경해서 삭제
-public class MemberService implements IMemberService{
+public class MemberService implements IMemberService {
 
     private final IMemberRepository repository;
 
-    //@Autowired --> springconfig.파일로 변경해서 삭제
     public MemberService(IMemberRepository memberRepository){
         this.repository = memberRepository;
     }
@@ -52,15 +46,10 @@ public class MemberService implements IMemberService{
     public Long join(Member member){
 
         // 중복이름 안된다.
-        try {
-            if (!validateDuplicateMember(member)) {
-                repository.save(member);
+        validateDuplicateMember(member);
 
-            }
-        } catch (IllegalStateException ex){
-            Long val = 99L;
-            return 99L;
-        }
+        repository.save(member);
+
         return member.getId();
     }
 
@@ -82,14 +71,11 @@ public class MemberService implements IMemberService{
 
     private boolean validateDuplicateMember(Member member) {
         boolean rtn = false;
-        try {
-            repository.findByName(member.getName())
-                    .ifPresent(member1 -> {
-                        throw new IllegalStateException("이미 회원이 존재합니다.");
-                    });
-        } catch (NullPointerException ex){
-            return false;
-        }
+
+        repository.findByName(member.getName())
+                .ifPresent(member1 -> {
+                    throw new IllegalStateException("이미 회원이 존재합니다.");
+                });
         return rtn;
     }
 

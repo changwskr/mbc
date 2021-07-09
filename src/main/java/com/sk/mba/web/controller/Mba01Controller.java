@@ -1,43 +1,32 @@
-package com.sk.mbc.web.controller;
+package com.sk.mba.web.controller;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.service.MemberService;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.sk.fwk.common.CommonUtil;
 
 import java.util.List;
 
 @Controller
-public class MemberController {
+public class Mba01Controller {
+
 
     private final MemberService memberService;
 
-    public void kkk() {
-        CommonUtil.Char2Str('a');
-        System.out.println("------------------------------------------------kkkkk----");
-        return;
-    }
-
     @Autowired
-    public MemberController(MemberService memberService){
+    public Mba01Controller(MemberService memberService) {
         this.memberService = memberService;
-        System.out.println("------------------------------------------------------");
-        kkk();
-        System.out.println("------------------------------------------------------");
     }
 
-    @GetMapping("/members/new") // http://localhost:8080/members/new
+    @GetMapping("/members2/new2") // http://localhost:8080/members/new
     public String createForm() {
         return "members/createMemberForm";  //리턴하면 template/member/createMemberForm.html 파일을 찾아간
     }
 
-    @PostMapping("/members/new")
+    @PostMapping("/members2/new2")
     public String create(MemberForm form) {
         Member member = new Member();
         member.setName(form.getName());
@@ -53,13 +42,12 @@ public class MemberController {
 
     // 회원목록
     // http://localhost:8080/members
-    @GetMapping("/members")
+    @GetMapping("/members2")
     public String list(Model model){
         List<Member> list = memberService.findMembers();
         model.addAttribute("members",list);
         System.out.println("------------------------------------------------------");
-        return "members/memberList";  // templates/members/memberList.html로 가라는 말이다.
+        return "members2/memberList";  // templates/members/memberList.html로 가라는 말이다.
     }
-
 
 }

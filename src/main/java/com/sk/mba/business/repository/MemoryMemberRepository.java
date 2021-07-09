@@ -1,6 +1,6 @@
-package com.sk.mbc.business.repository;
+package com.sk.mba.business.repository;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mba.business.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -13,8 +13,7 @@ import java.util.*;
  * 데이타를 들어올때마다, sequence를 증가시키면서 Member객체를 저장한다.
  */
 
-//@Repository --> springconfig.java 로 변경해서 삭제
-public class MemoryMemberRepository implements IMemberRepository{
+public class MemoryMemberRepository implements IMemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); // typedl Long, Member  인 HashMap() 객체를 만들어라
     private static long sequence = 0L;

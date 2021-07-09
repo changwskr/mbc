@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="container">
+
+  <!--
+    http://localhost:8080/members/new을 호출하면서
+    post방식으로 파라미터이름 : name, 파라미턱밧: name이 요청된다. name:name
+  -->
+
+  <form action="/members/new" method="post">
+    <div class="form-group">
+      <label form="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+    </div>
+    <button type="submit">등록</button>
+  </form>
+</div> <!--/container -->
+
+</body>
+</html>
+
+
+

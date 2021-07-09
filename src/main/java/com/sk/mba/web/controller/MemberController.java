@@ -1,15 +1,13 @@
-package com.sk.mbc.web.controller;
+package com.sk.mba.web.controller;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.service.MemberService;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.service.MemberService;
+import com.sk.mba.web.controller.MemberForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.sk.fwk.common.CommonUtil;
 
 import java.util.List;
 
@@ -18,17 +16,10 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    public void kkk() {
-        CommonUtil.Char2Str('a');
-        System.out.println("------------------------------------------------kkkkk----");
-        return;
-    }
-
     @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
-        System.out.println("------------------------------------------------------");
-        kkk();
+
         System.out.println("------------------------------------------------------");
     }
 
