@@ -1,7 +1,6 @@
 package com.sk.mbc.business.repository;
 
 import com.sk.mbc.business.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
