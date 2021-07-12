@@ -150,15 +150,15 @@ public class JdbcMemberRepository implements IMemberRepository {
         }
     }
 
-    @Override
-    public void clear() {
+//    @Override
+//    public void clear() {
+//
+//    }
 
-    }
-
-    @Override
-    public Long remove(String name) {
-        return null;
-    }
+//    @Override
+//    public Long remove(String name) {
+//        return null;
+//    }
 
     private void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
 

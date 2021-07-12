@@ -1,13 +1,13 @@
-package com.sk.mbc.aop;
+package com.sk.mbc.business.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-//import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component;
 
 
 @Aspect
-//@Component
+@Component
 public class TimeTraceAop {
 
     @Around("execution(* com.sk.mbc..*(..))")

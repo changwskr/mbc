@@ -1,4 +1,4 @@
-package com.sk.mbc.business.domain;
+package com.sk.mbb.business.domain;
 
 import javax.persistence.*;
 

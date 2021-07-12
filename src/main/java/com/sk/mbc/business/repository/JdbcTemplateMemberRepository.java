@@ -59,14 +59,18 @@ public class JdbcTemplateMemberRepository implements IMemberRepository{
         return result;
     }
 
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
+//    @Override
     public Long remove(String name) {
-        return null;
+
+        // int rowCount = this.jdbcTemplate.queryForInt("select count(*) from t_actor");
+        // int countOfActorsNamedJoe = this.jdbcTemplate.queryForInt("select count(*) from t_actor where first_name = ?", "Joe");
+        // String lastName = this.jdbcTemplate.queryForObject("select last_name from t_actor where id = ?", new Object[]{1212L}, String.class);
+        // this.jdbcTemplate.update("insert into t_actor (first_name, last_name) values (?, ?)",  "Leonor", "Watling");
+        // this.jdbcTemplate.update("update t_actor set = ? where id = ?",  "Banjo", 5276L);
+        // this.jdbcTemplate.update("delete from actor where id = ?", Long.valueOf(actorId));
+
+        int rows = jdbcTemplate.update("delete from where name = ?", memberRowMapper(), name);
+        return Long.valueOf(rows);
     }
 
     /**

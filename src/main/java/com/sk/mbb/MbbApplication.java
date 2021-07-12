@@ -1,13 +1,13 @@
-package com.sk.mbc;
+package com.sk.mbb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MbcApplication {
+public class MbbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MbcApplication.class, args);
+		SpringApplication.run(MbbApplication.class, args);
 	}
 
 }

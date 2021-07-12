@@ -47,19 +47,19 @@ public class MemoryMemberRepository implements IMemberRepository {
         return new ArrayList<>(store.values());
     }
 
-    @Override
-    public Long remove(String name){
-        Optional<Member> member = findByName(name);
-        member.get().getName();
-        Long idv = member.get().getId();
-        System.out.println(member.get().getName() + " " + member.get().getId());
+//    @Override
+//    public Long remove(String name){
+//        Optional<Member> member = findByName(name);
+//        member.get().getName();
+//        Long idv = member.get().getId();
+//        System.out.println(member.get().getName() + " " + member.get().getId());
+//
+//        store.remove(idv);
+//        return idv;
+//    }
 
-        store.remove(idv);
-        return idv;
-    }
-
-    public void clear(){
-        store.clear();
-    }
+//    public void clear(){
+//        store.clear();
+//    }
 
 }

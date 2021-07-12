@@ -1,9 +1,9 @@
-package com.sk.mbc.business.domain;
+package com.sk.mba.business.domain;
 
 import javax.persistence.*;
 
 @Entity
-public class Member {
+public class Member_JPA {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  //시스템에 저장하기 위해 사용하는 키값
@@ -18,7 +18,6 @@ public class Member {
     public String getJuso() {
         return juso;
     }
-
     public void setJuso(String juso) {
         this.juso = juso;
     }
@@ -29,7 +28,6 @@ public class Member {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -37,7 +35,6 @@ public class Member {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

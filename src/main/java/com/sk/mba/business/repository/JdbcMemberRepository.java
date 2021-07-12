@@ -1,6 +1,7 @@
-package com.sk.mbc.business.repository;
+package com.sk.mba.business.repository;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import javax.sql.DataSource;
@@ -149,21 +150,21 @@ public class JdbcMemberRepository implements IMemberRepository {
         }
     }
 
-    @Override
-    public void clear() {
+////    @Override
+////    public void clear() {
+//
+//    }
 
-    }
-
-    @Override
-    public Long removeTest(String name) {
-        Optional<Member> member = findByName(name);
-        member.get().getName();
-        Long idv = member.get().getId();
-        System.out.println(member.get().getName() + " " + member.get().getId());
-        //////////////////
-        /////////////////
-        return idv;
-    }
+//    @Override
+//    public Long remove(String name) {
+//        Optional<Member> member = findByName(name);
+//        member.get().getName();
+//        Long idv = member.get().getId();
+//        System.out.println(member.get().getName() + " " + member.get().getId());
+//        //////////////////
+//        /////////////////
+//        return idv;
+//    }
 
 
 

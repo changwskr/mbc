@@ -1,6 +1,5 @@
-package com.sk.mbc.web.controller;
+package com.sk.mbb.web.controller;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

@@ -1,5 +1,6 @@
 package com.sk.mbc.business.repository.dao;
 
+import com.sk.mbc.business.domain.Info;
 import java.util.ArrayList;
 
 public class DaoTest {
@@ -28,5 +29,3 @@ public class DaoTest {
         }
     }
 }
-
-`

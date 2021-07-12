@@ -1,4 +1,4 @@
-package com.sk.mbc.web.controller;
+package com.sk.mbb.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

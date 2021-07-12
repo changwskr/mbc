@@ -1,6 +1,7 @@
 package com.sk.mbc.business.repository;
 import com.sk.mbc.business.domain.Member;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,13 +45,14 @@ public class JpaMemberRepository implements IMemberRepository{
 
     }
 
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
+//    @Override
     public Long remove(String name) {
-        return null;
+
+        Query query = em.createQuery("delete from Member m where m.name = :name", Member.class);
+        query.setParameter("name", name);
+        int rowsDeleted = query.executeUpdate();
+
+        return Long.valueOf(rowsDeleted);
+
     }
 }

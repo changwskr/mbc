@@ -1,8 +1,9 @@
-package com.sk.mbc.business.service;
+package com.sk.mbb.business.service;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.repository.IMemberRepository;
-import com.sk.mbc.business.repository.MemoryMemberRepository;
+import com.sk.mbb.business.domain.Member;
+import com.sk.mbb.business.repository.IMemberRepository;
+import com.sk.mbb.business.repository.MemoryMemberRepository;
+import com.sk.mbb.business.service.IMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 
 //@Service --> springconfig 파일로 변경해서 삭제
-public class MemberService implements IMemberService{
+public class MemberService implements IMemberService {
 
     private final IMemberRepository repository;
 

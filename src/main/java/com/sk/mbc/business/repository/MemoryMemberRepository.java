@@ -47,7 +47,7 @@ public class MemoryMemberRepository implements IMemberRepository{
         return new ArrayList<>(store.values());
     }
 
-    @Override
+//    @Override
     public Long remove(String name){
         Optional<Member> member = findByName(name);
         member.get().getName();

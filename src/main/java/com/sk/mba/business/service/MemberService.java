@@ -2,10 +2,13 @@ package com.sk.mba.business.service;
 
 import com.sk.mba.business.domain.Member;
 import com.sk.mba.business.repository.IMemberRepository;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.Optional;
 
 
+@Transactional
 public class MemberService implements IMemberService {
 
     private final IMemberRepository repository;
@@ -106,7 +109,7 @@ public class MemberService implements IMemberService {
     }
 
     void deleteMember(String name){
-        repository.remove(name);
+//        repository.remove(name);
     }
 
 

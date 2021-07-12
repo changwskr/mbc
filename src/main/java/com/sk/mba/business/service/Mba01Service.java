@@ -40,7 +40,7 @@ public class Mba01Service implements IMba01Service {
                 updateMember(name);
                 break;
             case 4000:
-                deleteMember(name);
+//                deleteMember(name);
                 break;
             case 5000:
                 member = new Member();
@@ -133,9 +133,9 @@ public class Mba01Service implements IMba01Service {
         }
     }
 
-    void deleteMember(String name){
-        repository.remove(name);
-    }
+//    void deleteMember(String name){
+//        repository.remove(name);
+//    }
 
 
 

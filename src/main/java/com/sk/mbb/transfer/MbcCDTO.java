@@ -1,4 +1,4 @@
-package com.sk.mbc.transfer;
+package com.sk.mbb.transfer;
 
 public class MbcCDTO {
 }

@@ -86,8 +86,6 @@ public class JdbcMemberRepository implements IMemberRepository {
         PreparedStatement psmt = null;
         ResultSet rs = null;
 
-
-
         try {
             conn = dataSource.getConnection();
             psmt = conn.prepareStatement(sql);
@@ -149,15 +147,54 @@ public class JdbcMemberRepository implements IMemberRepository {
         }
     }
 
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
+//    @Override
     public Long remove(String name) {
-        return null;
+        String sql = "delete from member where name = ?";
+        Connection conn = null;
+        PreparedStatement psmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = dataSource.getConnection();
+            psmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS); // id 키값 생성 RETURN_GENERATED_KEYS
+            psmt.setString(1, name);
+            int r = psmt.executeUpdate(); //r : 반영된 rows 수
+
+            return Long.valueOf(r);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            throw new IllegalStateException(throwables);
+        } finally {
+            close(conn, psmt, rs);
+        }
+
     }
+
+    public Long update(String name, String juso) {
+        String sql = "update member set juso = ? where name = ?";
+        Connection conn = null;
+        PreparedStatement psmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = dataSource.getConnection();
+            psmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS); // id 키값 생성 RETURN_GENERATED_KEYS
+            psmt.setString(1, juso);
+            psmt.setString(2, name);
+            int r = psmt.executeUpdate(); //r : 반영된 rows 수
+
+            return Long.valueOf(r);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            throw new IllegalStateException(throwables);
+        } finally {
+            close(conn, psmt, rs);
+        }
+    }
+
+
 
     private void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
 

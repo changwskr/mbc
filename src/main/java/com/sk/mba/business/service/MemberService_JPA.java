@@ -1,10 +1,8 @@
-package com.sk.mbc.business.service;
+package com.sk.mba.business.service;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.repository.IMemberRepository;
-import com.sk.mbc.business.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
+import com.sk.mba.business.service.IMemberService;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -13,12 +11,12 @@ import java.util.Optional;
 
 //@Service --> springconfig 파일로 변경해서 삭제
 @Transactional
-public class MemberService implements IMemberService{
+public class MemberService_JPA implements IMemberService {
 
     private final IMemberRepository repository;
 
     //@Autowired --> springconfig.파일로 변경해서 삭제
-    public MemberService(IMemberRepository memberRepository){
+    public MemberService_JPA(IMemberRepository memberRepository){
         this.repository = memberRepository;
     }
 
@@ -122,7 +120,7 @@ public class MemberService implements IMemberService{
     }
 
     void deleteMember(String name){
-        repository.removeTest(name);
+//        repository.remove(name);
     }
 
 

@@ -1,6 +1,7 @@
-package com.sk.mbc.business.repository;
+package com.sk.mba.business.repository;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

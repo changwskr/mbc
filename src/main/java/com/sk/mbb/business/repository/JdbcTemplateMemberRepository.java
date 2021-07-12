@@ -1,6 +1,7 @@
-package com.sk.mbc.business.repository;
+package com.sk.mbb.business.repository;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mbb.business.domain.Member;
+import com.sk.mbb.business.repository.IMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,7 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class JdbcTemplateMemberRepository implements IMemberRepository{
+public class JdbcTemplateMemberRepository implements IMemberRepository {
 
 
     private final JdbcTemplate jdbcTemplate;

@@ -1,6 +1,6 @@
 package com.sk.mba.business.domain;
 
-public class Member {
+public class Member_MEM {
     private Long id;  //시스템에 저장하기 위해 사용하는 키값
     private String name; //이름은 고객이 직접 화면에서 올려준다.
     private String juso;

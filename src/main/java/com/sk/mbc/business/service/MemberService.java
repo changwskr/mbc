@@ -41,7 +41,7 @@ public class MemberService implements IMemberService{
                 updateMember(name);
                 break;
             case 'd':
-                deleteMember(name);
+//                deleteMember(name);
                 break;
             default:
                 break;
@@ -59,11 +59,13 @@ public class MemberService implements IMemberService{
                 repository.save(member);
 
             }
+            return member.getId();
         } catch (IllegalStateException ex){
             Long val = 99L;
             return 99L;
+        } finally {
         }
-        return member.getId();
+
     }
 
     /**
@@ -121,9 +123,9 @@ public class MemberService implements IMemberService{
         }
     }
 
-    void deleteMember(String name){
-        repository.remove(name);
-    }
+//    void deleteMember(String name){
+//        Long itv = repository.remove(name);
+//    }
 
 
 

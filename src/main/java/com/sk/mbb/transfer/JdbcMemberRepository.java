@@ -1,7 +1,7 @@
-package com.sk.mbc.transfer;
+package com.sk.mbb.transfer;
 
-import com.sk.mba.business.domain.Member;
-import com.sk.mba.business.repository.IMemberRepository;
+import com.sk.mbb.business.domain.Member;
+import com.sk.mbb.business.repository.IMemberRepository;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import javax.sql.DataSource;
@@ -156,7 +156,7 @@ public class JdbcMemberRepository implements IMemberRepository {
     }
 
     @Override
-    public Long remove(String name) {
+    public Long removeTest(String name) {
         return null;
     }
 

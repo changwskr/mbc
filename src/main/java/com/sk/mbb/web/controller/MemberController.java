@@ -1,15 +1,13 @@
-package com.sk.mbc.web.controller;
+package com.sk.mbb.web.controller;
 
-import com.sk.mbc.business.domain.Member;
-import com.sk.mbc.business.service.MemberService;
+import com.sk.fwk.common.CommonUtil;
+import com.sk.mbb.business.domain.Member;
+import com.sk.mbb.business.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.sk.fwk.common.CommonUtil;
 
 import java.util.List;
 

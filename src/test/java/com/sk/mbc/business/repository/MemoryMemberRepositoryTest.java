@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class MemoryMemberRepositoryTest {
-    IMemberRepository repository = new MemoryMemberRepository();
+    MemoryMemberRepository repository = new MemoryMemberRepository();
 
     /*
     * 모든 메소드가 실행후 호출되는 콜백메소드를 하나 작성한다.

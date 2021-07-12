@@ -1,4 +1,4 @@
-package com.sk.mbc.business.service;
+package com.sk.mbc.business.domain;
 
 public class Info {
     private String id;

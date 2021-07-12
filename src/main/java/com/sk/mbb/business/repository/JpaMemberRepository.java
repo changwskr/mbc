@@ -1,10 +1,12 @@
-package com.sk.mbc.business.repository;
-import com.sk.mbc.business.domain.Member;
+package com.sk.mbb.business.repository;
+import com.sk.mbb.business.domain.Member;
+import com.sk.mbb.business.repository.IMemberRepository;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class JpaMemberRepository implements IMemberRepository{
+public class JpaMemberRepository implements IMemberRepository {
     private final EntityManager em ;
 
     public JpaMemberRepository(EntityManager em) {

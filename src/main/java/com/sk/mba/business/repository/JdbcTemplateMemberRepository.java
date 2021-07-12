@@ -1,6 +1,7 @@
-package com.sk.mbc.business.repository;
+package com.sk.mba.business.repository;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,7 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class JdbcTemplateMemberRepository implements IMemberRepository{
+public class JdbcTemplateMemberRepository implements IMemberRepository {
 
 
     private final JdbcTemplate jdbcTemplate;
@@ -59,15 +60,15 @@ public class JdbcTemplateMemberRepository implements IMemberRepository{
         return result;
     }
 
-    @Override
-    public void clear() {
+////    @Override
+////    public void clear() {
+//
+//    }
 
-    }
-
-    @Override
-    public Long removeTest(String name) {
-        return null;
-    }
+//    @Override
+//    public Long remove(String name) {
+//        return null;
+//    }
 
     /**
      * Mapper를 등록한다.

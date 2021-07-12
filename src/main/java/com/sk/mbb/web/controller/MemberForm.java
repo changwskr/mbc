@@ -1,4 +1,4 @@
-package com.sk.mbc.web.controller;
+package com.sk.mbb.web.controller;
 
 public class MemberForm {
     public String getName() {

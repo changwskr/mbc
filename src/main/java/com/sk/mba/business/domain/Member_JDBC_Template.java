@@ -1,4 +1,4 @@
-package com.sk.mbc.business.domain;
+package com.sk.mba.business.domain;
 
 public class Member_JDBC_Template {
     private Long id;  //시스템에 저장하기 위해 사용하는 키값

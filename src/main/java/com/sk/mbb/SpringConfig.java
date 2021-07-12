@@ -1,7 +1,7 @@
-package com.sk.mbc;
+package com.sk.mbb;
 
-import com.sk.mbc.business.repository.*;
-import com.sk.mbc.business.service.MemberService;
+import com.sk.mbb.business.repository.*;
+import com.sk.mbb.business.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,34 +10,7 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
 @Configuration
-public class SpringConfig {
-
-    // Spring JPA
-    private final IMemberRepository memberRepository;
-
-    // Spring JPA
-    @Autowired
-    public SpringConfig(IMemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
-
-    @Bean
-    public MemberService memberService() {
-        return new MemberService(memberRepository);
-    }
-}
-
-
-class SpringConfig_JPA {
-
-    // 2> JPA TYPE
-    private EntityManager em;
-
-    // 2> JPA TYPE
-    @Autowired
-    public SpringConfig_JPA(EntityManager em) {
-        this.em = em;
-    }
+class SpringConfig {
 
     @Bean
     public MemberService memberService() {
@@ -47,12 +20,13 @@ class SpringConfig_JPA {
     @Bean
     public IMemberRepository memberRepository() {
 
-        //return new MemoryMemberRepository();
-        //return new JdbcMemberRepository(dataSource);
-        //return new JdbcTemplateMemberRepository(dataSource);
-        return new JpaMemberRepository(em);
+        return new MemoryMemberRepository();
     }
 }
+
+
+
+
 
 class SpringConfig_JDBC_TEMPLATE {
 

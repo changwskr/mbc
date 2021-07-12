@@ -1,4 +1,4 @@
-package com.sk.mbc.business.repository;
+package com.sk.mbb.business.repository;
 
 public class MemberRepository {
 }

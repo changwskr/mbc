@@ -1,6 +1,6 @@
-package com.sk.mbc.business.service;
+package com.sk.mbb.business.service;
 
-import com.sk.mbc.business.domain.Member;
+import com.sk.mbb.business.domain.Member;
 import java.util.List;
 import java.util.Optional;
 

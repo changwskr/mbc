@@ -1,10 +1,12 @@
-package com.sk.mbc.business.repository;
-import com.sk.mbc.business.domain.Member;
+package com.sk.mba.business.repository;
+import com.sk.mba.business.domain.Member;
+import com.sk.mba.business.repository.IMemberRepository;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class JpaMemberRepository implements IMemberRepository{
+public class JpaMemberRepository implements IMemberRepository {
     private final EntityManager em ;
 
     public JpaMemberRepository(EntityManager em) {
@@ -44,13 +46,13 @@ public class JpaMemberRepository implements IMemberRepository{
 
     }
 
-    @Override
-    public void clear() {
+//    @Override
+//    public void clear() {
+//
+//    }
 
-    }
-
-    @Override
-    public Long removeTest(String name) {
-        return null;
-    }
+//    @Override
+//    public Long remove(String name) {
+//        return null;
+//    }
 }
